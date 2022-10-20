@@ -1,8 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Banner from '../components/Homepage/Banner';
+import Carousel from '../components/Homepage/Carousel';
 
 const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <div>
+      <Banner/>
+      <Carousel/>
+    </div>
   )
 }
 

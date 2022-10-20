@@ -2,11 +2,11 @@ import React, { useContext } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Dropdown from 'react-bootstrap/Dropdown';
 import Container from 'react-bootstrap/Container';
-import { appContext } from '../Context';
+import { Crypto } from '../CryptoContext';
 
 const Header = () => {
 
-  const { currency, setCurrency } = useContext(appContext);
+  const { currency, setCurrency } = useContext(Crypto);
 
   const changeCurrency = () => {
     if(currency === "INR"){
@@ -18,7 +18,7 @@ const Header = () => {
   }
 
   return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar bg="dark" variant="dark" className="shadow">
       <Container>
         <Navbar.Brand href="/" style={{color:"#ffd200",fontWeight:"600"}}>
           CryptoSwitch
