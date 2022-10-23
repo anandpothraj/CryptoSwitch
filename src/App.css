@@ -2,3 +2,94 @@ html{
     background-color: #212529;
 }
 
+@media screen and (max-width: 700px) {
+    .carousel{
+        min-width: 90vw !important;
+    }
+    .coinName{
+        font-size: 12px !important;
+    }
+    .profit{
+        font-size: 13px !important;
+    }
+    .currentPrice{
+        font-size: 15px !important;
+    }
+    .searchBarHeading{
+        font-size: 20px !important;
+    }
+    .searchBar{
+        min-width: 80vw !important;
+    }
+    .progressBar{
+        min-width: 80vw !important;
+    }
+    .table{
+        min-width: 90vw !important;
+        overflow-y: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .table{
+        font-size: 12px !important;
+        gap: 10px !important;
+    }
+    .tableCoinImg{
+        height: 40px !important;
+    }
+    .tableCoinSymbol{
+        font-size: 10px !important;
+    }
+    .tableCoinName{
+        font-size: 10px !important;
+    }
+    .tableCoinPrice{
+        font-size: 10px !important;
+    }
+    .tableCoinChange{
+        font-size: 10px !important;
+    }
+    .tableCoinMarket{
+        font-size: 10px !important;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .banner{
+        min-height: 150px !important;
+    }
+    .bannerDiv{
+        min-width: 100vw;
+        text-align: left;
+        padding-left: 20px;
+    }
+    .heading{
+        font-size: 25px !important;
+    }
+    .subHeading{
+        font-size: 15px;
+    }
+    .carousel{
+        min-width: 95vw !important;
+    }
+    .coinName{
+        font-size: 12px !important;
+    }
+    .profit{
+        font-size: 10px !important;
+    }
+    .currentPrice{
+        font-size: 12px !important;
+    }
+    .searchBarHeading{
+        font-size: 15px !important;
+    }
+    .searchBar{
+        min-width: 90vw !important;
+        font-size: 13px !important;
+    }
+}
+
+
+

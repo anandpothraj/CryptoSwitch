@@ -56,8 +56,9 @@ const Carousel = () => {
           alt={coin.name}
           height="80"
           style={{ marginBottom: 10 }}
+          className="carouselImg"
         />
-        <span>
+        <span className="coinName">
           {coin?.symbol}
           &nbsp;
           <span
@@ -65,12 +66,13 @@ const Carousel = () => {
               color: profit > 0 ? "rgb(14, 203, 129)" : "red",
               fontWeight: 500,
             }}
+            className="profit"
           >
             {profit && "+"}
             {coin?.price_change_percentage_24h?.toFixed(2)}%
           </span>
         </span>
-        <span style={{ fontSize: 22, fontWeight: 500 }}>
+        <span style={{ fontSize: 22, fontWeight: 500 }} className="currentPrice">
           {symbol} {numberWithCommas(coin?.current_price.toFixed(2))}
         </span>
       </Link>
@@ -88,7 +90,7 @@ const Carousel = () => {
 
   return (
     <div className="carouselDiv" style={{backgroundColor:"#212529",minHeight:"20vh"}}>
-      <div style={carousel}>
+      <div style={carousel} className="carousel">
       <AliceCarousel
         mouseTracking
         infinite
