@@ -69,10 +69,10 @@ const CoinsTable = () => {
                         <Table className='w-75 m-auto mt-2 table'>
                             <thead style={{backgroundColor:"#ffd200",color:"black",border:"none"}}>
                                 <tr>
-                                    <th>Coin</th>
-                                    <th>Price</th>
-                                    <th>24hr Change</th>
-                                    <th>Market Cap</th>
+                                    <th className='tableHead'>Coin</th>
+                                    <th className='tableHead'>Price</th>
+                                    <th className='tableHead'>24hr Change</th>
+                                    <th className='tableHead'>Market Cap</th>
                                 </tr>
                             </thead>
                             <tbody className='text-light    '>
@@ -83,7 +83,7 @@ const CoinsTable = () => {
                                         <tr key={row.name} onClick={ () => navigate(`/coins/${row.id}`)} style={{cursor:"pointer"}} >
                                             <td className="tableCoin" style={{display:"flex",gap: 20,textAlign:"left"}} >
                                                 <img className="tableCoinImg" src={row?.image} alt={row.name} height="50" style={{ marginBottom: 10}}/>
-                                                <div style={{ display: "flex", flexDirection: "column" }}>
+                                                <div className='coinDiv' style={{ display: "flex", flexDirection: "column" }}>
                                                     <span className='tableCoinSymbol' style={{textTransform: "uppercase",fontSize: "22px"}}>{row.symbol}</span>
                                                     <span className='tableCoinName' style={{ color: "darkgrey" }}>{row.name}</span>
                                                 </div>

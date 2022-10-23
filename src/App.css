@@ -1,8 +1,12 @@
 html{
     background-color: #212529;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 700px) {
+    .carouselDiv{
+        min-height: 15vh !important;
+    }
     .carousel{
         min-width: 90vw !important;
     }
@@ -33,6 +37,8 @@ html{
 @media screen and (max-width: 600px) {
     .table{
         font-size: 12px !important;
+    }
+    .tableCoin{
         gap: 10px !important;
     }
     .tableCoinImg{
@@ -90,6 +96,29 @@ html{
         font-size: 13px !important;
     }
 }
+
+@media screen and (max-width: 350px) {
+    .tableHead{
+        padding: 0.5px 0px !important;
+    }
+    .coinDiv{
+        flex-direction: row !important;
+    }
+    .tableCoin{
+        display: flex !important;
+        flex-direction: column !important;
+        gap:5 !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    .tableCoinImg{
+        width: 50px !important;
+        margin-bottom: 0px !important;
+    }
+    .tableCoinSymbol{
+        margin-right: 5px !important;
+    } 
+} 
 
 
 

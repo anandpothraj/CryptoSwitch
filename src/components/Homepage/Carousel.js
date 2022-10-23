@@ -89,7 +89,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="carouselDiv" style={{backgroundColor:"#212529",minHeight:"20vh"}}>
+    <div className="carouselDiv" style={{backgroundColor:"#212529",minHeight:"20vh",margin:"auto",display: "flex"}}>
       <div style={carousel} className="carousel">
       <AliceCarousel
         mouseTracking
