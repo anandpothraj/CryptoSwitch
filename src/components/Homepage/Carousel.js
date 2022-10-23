@@ -7,7 +7,7 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 import React ,{ useEffect, useState, useContext } from "react";
 
 export function numberWithCommas(x){
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 const Carousel = () => {
