@@ -3,7 +3,6 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { Crypto } from "../CryptoContext";
 import { SingleCoin } from '../config/api';
-import ReactHtmlParser from 'react-html-parser';
 
 const CoinPage = () => {
 
@@ -18,6 +17,7 @@ const CoinPage = () => {
 
   useEffect(() => {
     fetchCoin();
+    console.log(coin?.description.en.split(". ")[0]);
     // eslint-disable-next-line
   },[])
 
@@ -30,7 +30,7 @@ const CoinPage = () => {
           style={{ marginBottom:"20px",height:"20px" }}
         />
         <h3>{coin?.name}</h3>
-        <p>{ReactHtmlParser(coin?.description.en.split(". ")[0])}.</p>
+        <p>{coin?.description.en.split(". ")[0]}</p>
         <div>
           <span style={{ display: "flex" }}>
             <h5>Rank:</h5>
