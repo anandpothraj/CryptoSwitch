@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { Crypto } from "../CryptoContext";
 import { SingleCoin } from '../config/api';
 import parse from 'html-react-parser';
-
+import CoinInfo from '../components/CoinPage/CoinInfo';
 
 const CoinPage = () => {
 
@@ -23,15 +23,15 @@ const CoinPage = () => {
   },[])
 
   return (
-    <div className="container d-flex flex-col align-items-center p-0 m-0 text-light" style={{backgroundColor:"blue",minWidth:"100vw", minHeight:"100%"}}>
-      <div className='sidebar align-items-center text-center p-3' style={{width: "25vw",borderRight: "2px solid grey", backgroundColor:"red", minHeight:"80vh"}}>
+    <div className="container d-flex flex-col text-center align-items-center p-0 m-0 text-light mt-4" style={{minWidth:"100vw", minHeight:"100%"}}>
+      <div className='sidebar align-items-center p-3' style={{width: "30vw",borderRight: "2px solid grey",minHeight:"80vh"}}>
         <img
           src={coin?.image.large}
           alt={coin?.name}
           style={{height:"200px",marginBottom:"20px"}}
         />
         <h3 className="display-5" style={{fontWeight:"500"}}>{coin?.name}</h3>
-        <p>{parse(`${coin?.description.en.split(". ")[0]}`)}.</p>
+        <p style={{textAlign:"left",color:"#EEBC1D"}} >{parse(`${coin?.description.en.split(". ")[0]}`)}.</p>
         <div>
           <span style={{ display: "flex" }}>
             <h5>Rank:</h5>
@@ -50,6 +50,7 @@ const CoinPage = () => {
           </span>
         </div>
       </div>
+      <CoinInfo/>
     </div>
   )
 }
