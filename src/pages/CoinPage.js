@@ -3,6 +3,8 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { Crypto } from "../CryptoContext";
 import { SingleCoin } from '../config/api';
+import parse from 'html-react-parser';
+
 
 const CoinPage = () => {
 
@@ -17,20 +19,19 @@ const CoinPage = () => {
 
   useEffect(() => {
     fetchCoin();
-    console.log(coin?.description.en.split(". ")[0]);
     // eslint-disable-next-line
   },[])
 
   return (
-    <div className="container d-flex flex-col align-items-center">
-      <div className='sidebar d-flex flex-col align-items-center' style={{width: "30vw",marginTop: 25,borderRight: "2px solid grey"}}>
+    <div className="container d-flex flex-col align-items-center p-0 m-0 text-light" style={{backgroundColor:"blue",minWidth:"100vw", minHeight:"100%"}}>
+      <div className='sidebar align-items-center text-center p-3' style={{width: "25vw",borderRight: "2px solid grey", backgroundColor:"red", minHeight:"80vh"}}>
         <img
           src={coin?.image.large}
           alt={coin?.name}
-          style={{ marginBottom:"20px",height:"20px" }}
+          style={{height:"200px",marginBottom:"20px"}}
         />
-        <h3>{coin?.name}</h3>
-        <p>{coin?.description.en.split(". ")[0]}</p>
+        <h3 className="display-5" style={{fontWeight:"500"}}>{coin?.name}</h3>
+        <p>{parse(`${coin?.description.en.split(". ")[0]}`)}.</p>
         <div>
           <span style={{ display: "flex" }}>
             <h5>Rank:</h5>
@@ -49,7 +50,6 @@ const CoinPage = () => {
           </span>
         </div>
       </div>
-      {/* <CoinInfo coin={coin} /> */}
     </div>
   )
 }

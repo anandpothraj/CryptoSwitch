@@ -3,13 +3,13 @@ import React from 'react';
 const Footer = () => {
 
     var footer = {
-        left: "0",
-        bottom: "0",
+        // left: "0",
+        // bottom: "0",
         color:"white",
         width: "100%",
         height: "30px",
         fontSize:"15px",
-        position: "fixed",
+        // position: "fixed",
         textAlign: "center",
         backgroundColor:'#212529',
     }

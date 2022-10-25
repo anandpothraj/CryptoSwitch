@@ -3,6 +3,10 @@ html{
     overflow-x: hidden;
 }
 
+#root{
+    background-color: #212529;
+}
+
 @media screen and (max-width: 700px) {
     .carouselDiv{
         min-height: 15vh !important;
