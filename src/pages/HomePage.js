@@ -8,6 +8,7 @@ const HomePage = () => {
     <div>
       <Banner/>
       <Carousel/>
+      <hr style={{color:"white"}}/>
       <CoinsTable/>
     </div>
   )

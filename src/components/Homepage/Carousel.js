@@ -12,7 +12,7 @@ export function numberWithCommas(x){
 
 const Carousel = () => {
 
-    const [trending, setTrending] = useState([]);
+    const [ trending, setTrending ] = useState([]);
     const { currency, symbol } = useContext(Crypto);
 
     const fetchTrendingCoins = async () => {
@@ -26,7 +26,6 @@ const Carousel = () => {
       alignItems: "center",
       width:"75vw",
       margin:"auto",
-      backgroundColor:"#212529"
     }
 
     let carouselItem = {
@@ -89,7 +88,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="carouselDiv" style={{backgroundColor:"#212529",minHeight:"20vh",margin:"auto",display: "flex"}}>
+    <div className="carouselDiv" style={{minHeight:"20vh",margin:"auto",display: "flex"}}>
       <div style={carousel} className="carousel">
       <AliceCarousel
         mouseTracking

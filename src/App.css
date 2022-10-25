@@ -7,6 +7,11 @@ html{
     background-color: #212529;
 }
 
+.navigationBtn{
+    background-color:#ffd200;
+    color:black;
+}
+
 @media screen and (max-width: 700px) {
     .carouselDiv{
         min-height: 15vh !important;
@@ -66,6 +71,10 @@ html{
 }
 
 @media screen and (max-width: 500px) {
+    .partation{
+        display: block;
+        color: white;
+    }
     .banner{
         min-height: 150px !important;
     }
@@ -99,11 +108,26 @@ html{
         min-width: 90vw !important;
         font-size: 13px !important;
     }
+    .tableHead{
+        padding: 10px 0px !important;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .table{
+        min-width: 95vw !important;
+    }
+    .tableCoinMar{
+        font-size: 10px !important;
+    }
 }
 
 @media screen and (max-width: 350px) {
+    .table{
+        min-width: 98vw !important;
+    }
     .tableHead{
-        padding: 0.5px 0px !important;
+        padding: 0px 0px !important;
     }
     .coinDiv{
         flex-direction: row !important;
@@ -116,7 +140,7 @@ html{
         align-items: center !important;
     }
     .tableCoinImg{
-        width: 50px !important;
+        width: 40px !important;
         margin-bottom: 0px !important;
     }
     .tableCoinSymbol{
