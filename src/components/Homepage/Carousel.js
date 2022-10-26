@@ -5,6 +5,8 @@ import { TrendingCoins } from "../../config/api";
 import AliceCarousel from "react-alice-carousel";
 import 'react-alice-carousel/lib/alice-carousel.css';
 import React ,{ useEffect, useState, useContext } from "react";
+import { Container, Spinner } from "react-bootstrap";
+
 
 export function numberWithCommas(x){
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -89,19 +91,23 @@ const Carousel = () => {
 
   return (
     <div className="carouselDiv" style={{minHeight:"20vh",margin:"auto",display: "flex"}}>
-      <div style={carousel} className="carousel">
-      <AliceCarousel
-        mouseTracking
-        infinite
-        autoPlayInterval={1000}
-        animationDuration={1500}
-        disableDotsControls
-        disableButtonsControls
-        responsive={responsive}
-        items={items}
-        autoPlay
-      />
-    </div>
+      {
+        trending.length < 1  ? <Container className='d-flex justify-content-center m-auto'><Spinner animation="border" className='coinInfoSpinner my-4' variant="warning" size="lg" style={{height:"200px",width:"200px"}}/></Container> 
+        :
+        <div style={carousel} className="carousel">
+          <AliceCarousel
+            mouseTracking
+            infinite
+            autoPlayInterval={1000}
+            animationDuration={1500}
+            disableDotsControls
+            disableButtonsControls
+            responsive={responsive}
+            items={items}
+            autoPlay
+          />
+      </div>
+      }
     </div>
   );
 };

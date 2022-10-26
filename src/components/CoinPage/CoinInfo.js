@@ -3,7 +3,7 @@ import { useEffect, useState, useContext } from "react";
 import { useParams } from 'react-router-dom';
 import { HistoricalChart } from "../../config/api";
 import { Line } from "react-chartjs-2";
-import { Button, Spinner } from "react-bootstrap";
+import { Button, Spinner, Container } from "react-bootstrap";
 import { chartDays } from "../../config/data";
 import { Crypto } from "../../CryptoContext";
 import {CategoryScale} from 'chart.js'; 
@@ -30,12 +30,13 @@ const CoinInfo = () => {
   }, [days]);
 
   return (
-      <div style={{minWidth: "70vw"}}>
+      <div style={{minWidth: "70vw"}} className="CoinInfoDiv">
         {!historicData | flag===false ? (
-          <Spinner/>
+          <Container className='d-flex justify-content-center mt-4'><Spinner animation="border" className='m-auto coinInfoSpinner' variant="warning" size="lg" style={{height:"200px",width:"200px"}}/></Container>
         ) : (
           <>
           <Line
+            className="line"
               data={{
                 labels: historicData.map((coin) => {
                   let date = new Date(coin[0]);
@@ -51,6 +52,7 @@ const CoinInfo = () => {
                     data: historicData.map((coin) => coin[1]),
                     label: `Price ( Past ${days} Days ) in ${currency}`,
                     borderColor: "#EEBC1D",
+                    // fontSize:"10"
                   },
                 ],
               }}
@@ -76,7 +78,8 @@ const CoinInfo = () => {
                     onClick={() => {setDays(day.value);
                         setflag(false);
                     }}
-                    style={(day.value === days)?{backgroundColor:"#EEBC1D",color:"black"}:{backgroundColor:"#212529",border:"1px solid #EEBC1D",color:"#EEBC1D"}}
+                    style={(day.value === days)?{backgroundColor:"#EEBC1D",color:"black",border: "1px solid #212529"}:{backgroundColor:"#212529",border:"1px solid #EEBC1D",color:"#EEBC1D"}}
+                    className="timeBtn"
                 >
                     {day.label}
                 </Button>

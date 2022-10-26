@@ -56,11 +56,11 @@ const CoinsTable = () => {
     return (
     <div style={{ textAlign : "center" , backgroundColor:"#212529"}}>
         <h2 className='py-2 text-light searchBarHeading'>Cryptocurrency Prizes by Market Cap</h2>
-        <hr className='w-75' style={{color:"white",margin:"10px auto",height:"5px"}}/>
+        <hr className='headingHr' style={{color:"white",margin:"10px auto",height:"5px",maxWidth:"75vw"}}/>
         <Form.Control type="text" className='w-75 m-auto searchBar' placeholder="Search For A Crypto Currency..." value={search} onChange={(e)=>setSearch(e.target.value)}/>
         <div className='tableContainer'>
             {   
-                loading ? <Container className='d-flex justify-content-center mt-4'><Spinner animation="border" className='m-auto' variant="warning" size="lg"/></Container> 
+                loading ? <Container className='d-flex justify-content-center mt-4'><Spinner animation="border" className='m-auto tableSpinner' variant="warning" size="lg" style={{height:"200px",width:"200px"}} /></Container> 
                     :
                 <div>
                     <Table className='w-75 m-auto mt-2 table'>
